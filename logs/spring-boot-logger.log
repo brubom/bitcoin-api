@@ -1,0 +1,829 @@
+2019-02-10 18:31:11,732 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94288 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:31:11,735 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:31:11,735 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:31:11,791 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358c99f5: startup date [Sun Feb 10 18:31:11 GMT 2019]; root of context hierarchy
+2019-02-10 18:31:12,093 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:31:13,458 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:31:13,478 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:31:13,479 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:31:13,601 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:31:13,602 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1811 ms
+2019-02-10 18:31:13,769 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:31:13,779 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:31:13,780 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:31:13,782 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:31:13,782 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:31:14,480 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 18:31:14,481 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 18:31:14,484 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 18:31:14,485 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 18:31:14,486 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 18:31:14,489 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 18:31:14,489 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 18:31:14,593 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 
+2019-02-10 18:31:14,597 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService  'threadPoolTaskExecutor'
+2019-02-10 18:31:14,621 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 18:31:14,716 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358c99f5: startup date [Sun Feb 10 18:31:11 GMT 2019]; root of context hierarchy
+2019-02-10 18:31:14,786 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:31:14,786 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:31:14,832 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:31:14,983 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 18:31:14,998 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 18:31:14,999 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 18:31:15,033 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 18:31:15,070 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 18:31:15,274 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:31:15,289 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:31:15,324 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2019-02-10 18:31:15,360 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat started on port(s): 8080 (http)
+2019-02-10 18:31:15,365 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 4.094 seconds (JVM running for 4.484)
+2019-02-10 18:31:34,264 INFO org.springframework.context.support.AbstractApplicationContext [Thread-3] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358c99f5: startup date [Sun Feb 10 18:31:11 GMT 2019]; root of context hierarchy
+2019-02-10 18:31:34,266 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [Thread-3] Stopping beans in phase 2147483647
+2019-02-10 18:31:34,267 INFO org.springframework.jmx.export.MBeanExporter [Thread-3] Unregistering JMX-exposed beans on shutdown
+2019-02-10 18:31:34,268 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-3] Shutting down ExecutorService 'threadPoolTaskExecutor'
+2019-02-10 18:32:02,084 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94299 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:32:02,086 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:32:02,087 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:32:02,147 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358c99f5: startup date [Sun Feb 10 18:32:02 GMT 2019]; root of context hierarchy
+2019-02-10 18:32:02,635 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:32:04,074 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:32:04,088 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:32:04,089 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:32:04,190 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:32:04,190 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2044 ms
+2019-02-10 18:32:04,304 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:32:04,308 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:32:04,309 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:32:04,312 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:32:04,312 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:32:04,949 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 18:32:04,951 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 18:32:04,955 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 18:32:04,956 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 18:32:04,957 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 18:32:04,959 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 18:32:04,960 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 18:32:05,069 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 
+2019-02-10 18:32:05,073 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService  'threadPoolTaskExecutor'
+2019-02-10 18:32:05,098 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 18:32:05,181 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358c99f5: startup date [Sun Feb 10 18:32:02 GMT 2019]; root of context hierarchy
+2019-02-10 18:32:05,248 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:32:05,249 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:32:05,287 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:32:05,403 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 18:32:05,412 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 18:32:05,412 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 18:32:05,439 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 18:32:05,467 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 18:32:05,651 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:32:05,661 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:32:05,686 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2019-02-10 18:32:05,705 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat started on port(s): 8080 (http)
+2019-02-10 18:32:05,712 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 4.348 seconds (JVM running for 4.818)
+2019-02-10 18:33:05,780 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-10 18:33:05,781 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-10 18:33:05,811 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2019-02-10 18:33:05,845 DEBUG com.brubom.api.bitcoin.controller.BitcoinController [http-nio-8080-exec-1] Getting latest rate on controller
+2019-02-10 18:33:05,846 DEBUG com.brubom.api.bitcoin.repository.impl.BitcoinRepositoryDAOImpl [http-nio-8080-exec-1] Getting latest rate
+2019-02-10 18:33:05,950 ERROR com.brubom.api.bitcoin.repository.impl.BitcoinRepositoryDAOImpl [http-nio-8080-exec-1] latestRate is empty
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135)
+	at com.brubom.api.bitcoin.repository.impl.BitcoinRepositoryDAOImpl.getLatestRate(BitcoinRepositoryDAOImpl.java:45)
+	at com.brubom.api.bitcoin.service.impl.BitcoinServiceImpl.getLatestRate(BitcoinServiceImpl.java:42)
+	at com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate(BitcoinController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-02-10 18:33:05,952 ERROR com.brubom.api.bitcoin.service.impl.BitcoinServiceImpl [http-nio-8080-exec-1] Failed to get latest rate on service
+com.brubom.api.bitcoin.exception.RepositoryException: latestRate is empty
+	at com.brubom.api.bitcoin.repository.impl.BitcoinRepositoryDAOImpl.getLatestRate(BitcoinRepositoryDAOImpl.java:48)
+	at com.brubom.api.bitcoin.service.impl.BitcoinServiceImpl.getLatestRate(BitcoinServiceImpl.java:42)
+	at com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate(BitcoinController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135)
+	at com.brubom.api.bitcoin.repository.impl.BitcoinRepositoryDAOImpl.getLatestRate(BitcoinRepositoryDAOImpl.java:45)
+	... 56 common frames omitted
+2019-02-10 18:33:29,504 INFO org.springframework.context.support.AbstractApplicationContext [Thread-3] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358c99f5: startup date [Sun Feb 10 18:32:02 GMT 2019]; root of context hierarchy
+2019-02-10 18:33:29,508 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [Thread-3] Stopping beans in phase 2147483647
+2019-02-10 18:33:29,510 INFO org.springframework.jmx.export.MBeanExporter [Thread-3] Unregistering JMX-exposed beans on shutdown
+2019-02-10 18:33:29,512 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-3] Shutting down ExecutorService 'threadPoolTaskExecutor'
+2019-02-10 18:35:41,053 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94325 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:35:41,055 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:35:41,056 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:35:41,126 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358c99f5: startup date [Sun Feb 10 18:35:41 GMT 2019]; root of context hierarchy
+2019-02-10 18:35:41,531 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:35:43,013 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:35:43,030 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:35:43,032 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:35:43,144 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:35:43,144 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2018 ms
+2019-02-10 18:35:43,308 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:35:43,312 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:35:43,313 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:35:43,313 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:35:43,313 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:35:44,013 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 18:35:44,014 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 18:35:44,018 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 18:35:44,019 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 18:35:44,020 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 18:35:44,024 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 18:35:44,025 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 18:35:44,151 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 
+2019-02-10 18:35:44,158 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService  'threadPoolTaskExecutor'
+2019-02-10 18:35:44,190 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 18:35:44,270 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358c99f5: startup date [Sun Feb 10 18:35:41 GMT 2019]; root of context hierarchy
+2019-02-10 18:35:44,329 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:35:44,329 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:35:44,371 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:35:44,552 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 18:35:44,567 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 18:35:44,568 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 18:35:44,610 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 18:35:44,653 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 18:35:44,865 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:35:44,881 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:35:44,914 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2019-02-10 18:35:44,941 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat started on port(s): 8080 (http)
+2019-02-10 18:35:44,947 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 4.338 seconds (JVM running for 4.817)
+2019-02-10 18:37:21,440 INFO org.springframework.context.support.AbstractApplicationContext [Thread-3] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358c99f5: startup date [Sun Feb 10 18:35:41 GMT 2019]; root of context hierarchy
+2019-02-10 18:37:21,526 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [Thread-3] Stopping beans in phase 2147483647
+2019-02-10 18:37:21,536 INFO org.springframework.jmx.export.MBeanExporter [Thread-3] Unregistering JMX-exposed beans on shutdown
+2019-02-10 18:37:21,540 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-3] Shutting down ExecutorService 'threadPoolTaskExecutor'
+2019-02-10 18:37:41,874 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94345 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:37:41,877 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:37:41,878 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:37:41,960 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:37:41 GMT 2019]; root of context hierarchy
+2019-02-10 18:37:42,286 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:37:43,671 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:37:43,686 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:37:43,688 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:37:43,799 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:37:43,800 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1840 ms
+2019-02-10 18:37:43,974 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:37:43,980 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:37:43,981 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:37:43,984 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:37:43,985 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:38:20,326 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94351 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:38:20,330 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:38:20,330 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:38:20,394 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:38:20 GMT 2019]; root of context hierarchy
+2019-02-10 18:38:20,679 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:38:22,045 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:38:22,059 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:38:22,060 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:38:22,150 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:38:22,151 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1757 ms
+2019-02-10 18:38:22,270 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:38:22,273 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:38:22,274 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:38:22,277 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:38:22,277 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:45:39,341 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94523 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:45:39,345 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:45:39,345 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:45:39,406 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:45:39 GMT 2019]; root of context hierarchy
+2019-02-10 18:45:39,774 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:45:41,082 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:45:41,099 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:45:41,101 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:45:41,225 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:45:41,225 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1819 ms
+2019-02-10 18:45:41,386 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:45:41,392 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:45:41,394 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:45:41,395 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:45:41,395 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:45:42,101 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 18:45:42,102 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 18:45:42,107 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 18:45:42,108 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 18:45:42,109 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 18:45:42,113 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 18:45:42,114 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 18:45:42,271 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 18:45:42,387 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:45:39 GMT 2019]; root of context hierarchy
+2019-02-10 18:45:42,480 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:45:42,481 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:45:42,518 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:45:42,736 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 18:45:42,745 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 18:45:42,746 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 18:45:42,776 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 18:45:42,810 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 18:45:43,073 INFO org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor [main] No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-10 18:45:47,695 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [pool-1-thread-1] ***********---Updating bitcoin database---***********
+2019-02-10 18:45:48,200 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:45:48,211 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:46:05,676 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94529 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:46:05,679 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:46:05,679 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:46:05,732 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:46:05 GMT 2019]; root of context hierarchy
+2019-02-10 18:46:06,037 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:46:08,049 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:46:08,090 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:46:08,091 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:46:08,370 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:46:08,372 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2640 ms
+2019-02-10 18:46:08,680 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:46:08,693 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:46:08,702 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:46:08,702 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:46:08,703 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:46:09,640 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 18:46:09,641 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 18:46:09,646 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 18:46:09,648 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 18:46:09,649 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 18:46:09,653 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 18:46:09,654 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 18:46:09,806 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 18:46:09,890 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:46:05 GMT 2019]; root of context hierarchy
+2019-02-10 18:46:09,952 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:46:09,953 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:46:09,993 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:46:10,229 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 18:46:10,236 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 18:46:10,237 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 18:46:10,259 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 18:46:10,290 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 18:46:10,517 INFO org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor [main] No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-10 18:46:53,046 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [pool-1-thread-1] ***********---Updating bitcoin database---***********
+2019-02-10 18:47:10,496 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:51:05,165 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94589 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:51:05,169 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:51:05,169 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:51:05,222 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:51:05 GMT 2019]; root of context hierarchy
+2019-02-10 18:51:05,586 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:51:06,827 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:51:06,842 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:51:06,844 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:51:06,961 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:51:06,961 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1739 ms
+2019-02-10 18:51:07,100 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:51:07,105 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:51:07,106 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:51:07,109 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:51:07,109 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:51:07,426 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bitcoinUpdateSchedule': Unsatisfied dependency expressed through field 'bitcoinCheckPeriod'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "0*/2***"
+2019-02-10 18:51:07,429 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2019-02-10 18:51:07,448 INFO org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer [main] 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-02-10 18:51:07,452 ERROR org.springframework.boot.SpringApplication [main] Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bitcoinUpdateSchedule': Unsatisfied dependency expressed through field 'bitcoinCheckPeriod'; nested exception is org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "0*/2***"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.brubom.api.bitcoin.Application.main(Application.java:16)
+Caused by: org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "0*/2***"
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:77)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:54)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1092)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "0*/2***"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.valueOf(Integer.java:766)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:208)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:113)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:468)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:441)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:199)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:125)
+	at org.springframework.beans.TypeConverterSupport.doConvert(TypeConverterSupport.java:61)
+	... 23 common frames omitted
+2019-02-10 18:52:26,343 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94592 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:52:26,346 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:52:26,347 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:52:26,411 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:52:26 GMT 2019]; root of context hierarchy
+2019-02-10 18:52:26,817 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:52:28,208 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:52:28,226 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:52:28,227 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:52:28,331 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:52:28,331 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1920 ms
+2019-02-10 18:52:28,469 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:52:28,474 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:52:28,476 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:52:28,486 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:52:28,486 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:52:28,753 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bitcoinUpdateSchedule' defined in file [/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main/com/brubom/api/bitcoin/scheduling/BitcoinUpdateSchedule.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'UpdateBitcoinDatabase': Cron expression must consist of 6 fields (found 5 in "0 */2 * * *")
+2019-02-10 18:52:28,761 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2019-02-10 18:52:28,775 INFO org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer [main] 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-02-10 18:52:28,781 ERROR org.springframework.boot.SpringApplication [main] Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bitcoinUpdateSchedule' defined in file [/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main/com/brubom/api/bitcoin/scheduling/BitcoinUpdateSchedule.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'UpdateBitcoinDatabase': Cron expression must consist of 6 fields (found 5 in "0 */2 * * *")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.brubom.api.bitcoin.Application.main(Application.java:16)
+Caused by: java.lang.IllegalStateException: Encountered invalid @Scheduled method 'UpdateBitcoinDatabase': Cron expression must consist of 6 fields (found 5 in "0 */2 * * *")
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.processScheduled(ScheduledAnnotationBeanPostProcessor.java:456)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.postProcessAfterInitialization(ScheduledAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:423)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	... 15 common frames omitted
+2019-02-10 18:53:58,702 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94599 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:53:58,706 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:53:58,706 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:53:58,766 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:53:58 GMT 2019]; root of context hierarchy
+2019-02-10 18:53:59,125 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:54:00,466 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:54:00,481 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:54:00,483 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:54:00,589 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:54:00,589 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1823 ms
+2019-02-10 18:54:00,714 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:54:00,721 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:54:00,722 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:54:00,725 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:54:00,725 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:54:01,425 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 18:54:01,428 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 18:54:01,431 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 18:54:01,432 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 18:54:01,433 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 18:54:01,436 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 18:54:01,437 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 18:54:01,590 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 18:54:01,677 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:53:58 GMT 2019]; root of context hierarchy
+2019-02-10 18:54:01,748 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:54:01,749 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:54:01,801 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:54:02,058 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 18:54:02,066 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 18:54:02,067 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 18:54:02,098 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 18:54:02,149 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 18:54:02,393 INFO org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor [main] No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-10 18:54:02,418 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:54:02,439 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:54:02,467 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2019-02-10 18:54:02,488 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat started on port(s): 8080 (http)
+2019-02-10 18:54:02,495 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 4.263 seconds (JVM running for 4.752)
+2019-02-10 18:57:20,488 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94610 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:57:20,492 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:57:20,493 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:57:20,556 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:57:20 GMT 2019]; root of context hierarchy
+2019-02-10 18:57:20,964 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:57:22,307 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:57:22,324 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:57:22,326 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:57:22,446 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:57:22,446 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1890 ms
+2019-02-10 18:57:22,638 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:57:22,645 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:57:22,647 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:57:22,650 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:57:22,650 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:57:23,443 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 18:57:23,445 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 18:57:23,449 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 18:57:23,450 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 18:57:23,452 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 18:57:23,455 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 18:57:23,456 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 18:57:23,585 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 18:57:23,675 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:57:20 GMT 2019]; root of context hierarchy
+2019-02-10 18:57:23,744 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:57:23,745 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:57:23,791 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 18:57:24,033 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 18:57:24,045 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 18:57:24,045 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 18:57:24,081 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 18:57:24,120 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 18:57:24,387 INFO org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor [main] No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-10 18:57:24,404 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:57:24,420 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-02-10 18:57:24,450 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2019-02-10 18:57:24,503 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat started on port(s): 8080 (http)
+2019-02-10 18:57:24,509 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 4.5 seconds (JVM running for 4.97)
+2019-02-10 18:58:32,842 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94615 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:58:32,845 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:58:32,846 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:58:32,901 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:58:32 GMT 2019]; root of context hierarchy
+2019-02-10 18:58:33,255 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:58:34,630 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:58:34,646 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:58:34,648 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:58:34,758 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:58:34,759 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1858 ms
+2019-02-10 18:58:34,909 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:58:34,914 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:58:34,915 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:58:34,917 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:58:34,918 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:59:45,861 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94624 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 18:59:45,864 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 18:59:45,865 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 18:59:45,927 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 18:59:45 GMT 2019]; root of context hierarchy
+2019-02-10 18:59:46,321 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 18:59:47,635 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 18:59:47,651 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 18:59:47,652 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 18:59:47,794 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 18:59:47,794 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1867 ms
+2019-02-10 18:59:47,934 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 18:59:47,941 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 18:59:47,942 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 18:59:47,945 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 18:59:47,946 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 18:59:55,807 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] ***********---Updating bitcoin database---***********
+2019-02-10 19:00:05,699 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94626 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 19:00:05,702 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 19:00:05,703 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 19:00:05,762 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 19:00:05 GMT 2019]; root of context hierarchy
+2019-02-10 19:00:06,072 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 19:00:07,242 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 19:00:07,256 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 19:00:07,257 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 19:00:07,352 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 19:00:07,353 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1590 ms
+2019-02-10 19:00:07,489 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 19:00:07,494 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 19:00:07,495 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 19:00:07,498 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 19:00:07,498 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 19:00:12,657 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] ***********---Updating bitcoin database---***********
+2019-02-10 19:00:41,862 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94632 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 19:00:41,866 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 19:00:41,867 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 19:00:41,940 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 19:00:41 GMT 2019]; root of context hierarchy
+2019-02-10 19:00:42,233 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 19:00:43,593 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 19:00:43,607 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 19:00:43,608 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 19:00:43,701 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 19:00:43,701 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1761 ms
+2019-02-10 19:00:43,845 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 19:00:43,850 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 19:00:43,851 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 19:00:43,855 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 19:00:43,856 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 19:04:18,025 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94649 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 19:04:18,028 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 19:04:18,029 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 19:04:18,083 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 19:04:18 GMT 2019]; root of context hierarchy
+2019-02-10 19:04:18,430 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 19:04:19,680 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 19:04:19,696 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 19:04:19,698 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 19:04:19,818 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 19:04:19,818 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1735 ms
+2019-02-10 19:04:20,005 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 19:04:20,010 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 19:04:20,011 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 19:04:20,013 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 19:04:20,013 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 19:04:33,285 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] ***********---Updating bitcoin database---***********
+2019-02-10 19:04:40,897 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getHistoricalRates service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:05:28,970 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94660 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 19:05:28,976 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 19:05:28,976 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 19:05:29,073 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 19:05:29 GMT 2019]; root of context hierarchy
+2019-02-10 19:05:29,700 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 19:05:31,415 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 19:05:31,446 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 19:05:31,449 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 19:05:31,631 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 19:05:31,632 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2559 ms
+2019-02-10 19:05:31,817 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 19:05:31,823 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 19:05:31,824 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 19:05:31,827 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 19:05:31,827 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 19:13:03,268 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] ***********---Updating bitcoin database---***********
+2019-02-10 19:13:07,859 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getHistoricalRates service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:14:23,777 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getLatestRate service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:37:43,903 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94769 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 19:37:43,906 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 19:37:43,907 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 19:37:43,973 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 19:37:43 GMT 2019]; root of context hierarchy
+2019-02-10 19:37:44,273 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 19:37:45,595 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 19:37:45,610 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 19:37:45,611 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 19:37:45,735 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 19:37:45,735 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1762 ms
+2019-02-10 19:37:45,894 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 19:37:45,898 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 19:37:45,902 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 19:37:45,903 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 19:37:45,903 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 19:37:49,421 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] ***********---Updating bitcoin database---***********
+2019-02-10 19:37:49,436 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getHistoricalRates service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:38:31,209 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getLatestRate service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:38:57,815 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] Waiting :365 for next update
+2019-02-10 19:39:05,032 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 19:39:05,033 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 19:39:05,037 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 19:39:05,037 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 19:39:05,038 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 19:39:05,041 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 19:39:05,041 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 19:39:05,265 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 19:39:05,357 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 19:37:43 GMT 2019]; root of context hierarchy
+2019-02-10 19:39:05,421 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:39:05,421 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:39:05,459 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:39:05,658 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 19:39:05,666 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 19:39:05,667 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 19:39:05,701 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 19:39:05,754 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 19:39:06,007 INFO org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor [main] No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-10 19:39:06,028 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 19:39:06,057 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-02-10 19:39:06,081 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2019-02-10 19:39:06,100 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat started on port(s): 8080 (http)
+2019-02-10 19:39:06,105 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 82.674 seconds (JVM running for 83.177)
+2019-02-10 19:39:10,495 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-10 19:39:10,495 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-10 19:39:10,532 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2019-02-10 19:39:13,452 DEBUG com.brubom.api.bitcoin.controller.BitcoinController [http-nio-8080-exec-1] Getting latest rate on controller
+2019-02-10 19:39:17,738 DEBUG com.brubom.api.bitcoin.repository.impl.BitcoinRepositoryDAOImpl [http-nio-8080-exec-1] Getting latest rate
+2019-02-10 19:40:19,647 DEBUG com.brubom.api.bitcoin.controller.BitcoinController [http-nio-8080-exec-3] Getting historical rates on controller
+2019-02-10 19:40:32,034 INFO com.brubom.api.bitcoin.repository.impl.BitcoinRepositoryDAOImpl [http-nio-8080-exec-3] No values in memory database exists, returning empty result
+2019-02-10 19:40:34,534 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [http-nio-8080-exec-3] Calling getHistoricalRates service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:44:44,748 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94797 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 19:44:44,752 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 19:44:44,752 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 19:44:44,820 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 19:44:44 GMT 2019]; root of context hierarchy
+2019-02-10 19:44:45,119 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 19:44:46,446 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 19:44:46,464 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 19:44:46,465 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 19:44:46,591 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 19:44:46,591 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1771 ms
+2019-02-10 19:44:46,752 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 19:44:46,758 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 19:44:46,759 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 19:44:46,761 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 19:44:46,762 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 19:44:49,761 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] ***********---Updating bitcoin database---***********
+2019-02-10 19:44:49,783 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getHistoricalRates service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:44:55,306 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getLatestRate service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:44:55,520 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] Waiting :365 for next update
+2019-02-10 19:44:56,999 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 19:44:57,000 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 19:44:57,003 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 19:44:57,004 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 19:44:57,005 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 19:44:57,008 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 19:44:57,009 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 19:44:57,216 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 19:44:57,331 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7098b907: startup date [Sun Feb 10 19:44:44 GMT 2019]; root of context hierarchy
+2019-02-10 19:44:57,393 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:44:57,393 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:44:57,428 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:44:57,666 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 19:44:57,680 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 19:44:57,682 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 19:44:57,721 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 19:44:57,760 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 19:44:58,036 INFO org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor [main] No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-10 19:44:58,051 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 19:44:58,064 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-02-10 19:44:58,088 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2019-02-10 19:44:58,108 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat started on port(s): 8080 (http)
+2019-02-10 19:44:58,115 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 13.821 seconds (JVM running for 14.279)
+2019-02-10 19:45:05,782 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-10 19:45:05,782 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-10 19:45:05,806 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2019-02-10 19:45:05,840 DEBUG com.brubom.api.bitcoin.controller.BitcoinController [http-nio-8080-exec-1] Getting historical rates on controller
+2019-02-10 19:54:42,191 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94901 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 19:54:42,196 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 19:54:42,196 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 19:54:42,277 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6ad82709: startup date [Sun Feb 10 19:54:42 GMT 2019]; root of context hierarchy
+2019-02-10 19:54:42,870 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 19:54:45,165 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 19:54:45,200 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 19:54:45,203 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 19:54:45,408 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 19:54:45,409 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 3132 ms
+2019-02-10 19:54:45,658 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 19:54:45,666 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 19:54:45,668 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 19:54:45,669 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 19:54:45,670 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 19:54:45,965 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] ***********---Updating bitcoin database---***********
+2019-02-10 19:54:45,975 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getHistoricalRates service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:54:46,736 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getLatestRate service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:54:46,855 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] Waiting :365 for next update
+2019-02-10 19:54:47,364 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 19:54:47,366 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 19:54:47,370 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 19:54:47,372 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 19:54:47,373 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 19:54:47,376 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 19:54:47,377 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 19:54:47,522 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 19:54:47,635 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6ad82709: startup date [Sun Feb 10 19:54:42 GMT 2019]; root of context hierarchy
+2019-02-10 19:54:47,760 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:54:47,761 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:54:47,810 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:54:47,960 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 19:54:47,974 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 19:54:47,977 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 19:54:48,032 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 19:54:48,071 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 19:54:48,379 INFO org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor [main] No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-10 19:54:48,406 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 19:54:48,424 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-02-10 19:54:48,457 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2019-02-10 19:54:48,488 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat started on port(s): 8080 (http)
+2019-02-10 19:54:48,496 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 7.12 seconds (JVM running for 7.859)
+2019-02-10 19:55:32,778 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-10 19:55:32,779 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-10 19:55:32,822 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 43 ms
+2019-02-10 19:56:55,926 INFO org.springframework.context.support.AbstractApplicationContext [Thread-4] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6ad82709: startup date [Sun Feb 10 19:54:42 GMT 2019]; root of context hierarchy
+2019-02-10 19:56:56,100 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [Thread-4] Stopping beans in phase 2147483647
+2019-02-10 19:56:56,125 INFO org.springframework.jmx.export.MBeanExporter [Thread-4] Unregistering JMX-exposed beans on shutdown
+2019-02-10 19:57:40,256 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on MacPro-Bruno with PID 94959 (/Users/brunomoreira/Programming/git/restful/java/currency-api/build/classes/java/main started by brunomoreira in /Users/brunomoreira/Programming/git/restful/java/currency-api)
+2019-02-10 19:57:40,259 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2019-02-10 19:57:40,260 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2019-02-10 19:57:40,327 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14ec4505: startup date [Sun Feb 10 19:57:40 GMT 2019]; root of context hierarchy
+2019-02-10 19:57:40,689 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 5.3.5.Final
+2019-02-10 19:57:42,130 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat initialized with port(s): 8080 (http)
+2019-02-10 19:57:42,149 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2019-02-10 19:57:42,150 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-02-10 19:57:42,265 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-02-10 19:57:42,266 INFO org.springframework.boot.context.embedded.EmbeddedWebApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1940 ms
+2019-02-10 19:57:42,413 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-10 19:57:42,430 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-10 19:57:42,436 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-10 19:57:42,436 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-10 19:57:42,438 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-10 19:57:42,807 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] ***********---Updating bitcoin database---***********
+2019-02-10 19:57:42,827 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getHistoricalRates service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:57:43,417 DEBUG com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl [main] Calling getLatestRate service on endpoint:https://api.coindesk.com/v1/bpi/currentprice/usd.json
+2019-02-10 19:57:43,539 INFO com.brubom.api.bitcoin.scheduling.BitcoinUpdateSchedule [main] Waiting :365 for next update
+2019-02-10 19:57:44,119 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historicalrates],methods=[GET],params=[start && end]}" onto public java.util.List<com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO> com.brubom.api.bitcoin.controller.BitcoinController.getWeatherAverage(java.lang.String,java.lang.String)
+2019-02-10 19:57:44,122 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/latestrate],methods=[GET]}" onto public com.brubom.api.bitcoin.service.dto.BitcoinServiceDTO com.brubom.api.bitcoin.controller.BitcoinController.getLatestRate()
+2019-02-10 19:57:44,129 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-02-10 19:57:44,130 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-02-10 19:57:44,131 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-02-10 19:57:44,134 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-10 19:57:44,135 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-10 19:57:44,359 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-10 19:57:44,611 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14ec4505: startup date [Sun Feb 10 19:57:40 GMT 2019]; root of context hierarchy
+2019-02-10 19:57:44,740 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:57:44,741 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:57:44,827 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-10 19:57:45,055 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2019-02-10 19:57:45,081 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [main] Starting beans in phase 2147483647
+2019-02-10 19:57:45,081 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2019-02-10 19:57:45,114 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2019-02-10 19:57:45,148 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2019-02-10 19:57:45,363 INFO org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor [main] No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-10 19:57:45,379 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-10 19:57:45,392 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2019-02-10 19:57:45,426 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2019-02-10 19:57:45,449 INFO org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer [main] Tomcat started on port(s): 8080 (http)
+2019-02-10 19:57:45,455 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 5.766 seconds (JVM running for 6.172)
+2019-02-10 19:58:19,079 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-10 19:58:19,081 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-10 19:58:19,115 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2019-02-10 19:58:35,753 INFO org.springframework.context.support.AbstractApplicationContext [Thread-3] Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14ec4505: startup date [Sun Feb 10 19:57:40 GMT 2019]; root of context hierarchy
+2019-02-10 19:58:35,772 INFO org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup [Thread-3] Stopping beans in phase 2147483647
+2019-02-10 19:58:35,786 INFO org.springframework.jmx.export.MBeanExporter [Thread-3] Unregistering JMX-exposed beans on shutdown

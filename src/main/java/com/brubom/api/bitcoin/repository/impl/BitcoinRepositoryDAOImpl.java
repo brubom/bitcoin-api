@@ -1,5 +1,7 @@
 package com.brubom.api.bitcoin.repository.impl;
 
+import com.brubom.api.bitcoin.exception.RepositoryException;
+import com.brubom.api.bitcoin.exception.ServiceException;
 import com.brubom.api.bitcoin.repository.BitcoinRepositoryDAO;
 import com.brubom.api.bitcoin.repository.dto.BitcoinRepositoryDTO;
 import org.apache.log4j.LogManager;
@@ -8,9 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.time.ZoneOffset;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
@@ -39,9 +39,14 @@ public class BitcoinRepositoryDAOImpl implements BitcoinRepositoryDAO {
 
         logger.debug("Getting latest rate");
 
-        return latestRate.entrySet().stream()
-                .max(Comparator.comparing(Map.Entry::getKey))
-                .get().getValue();
+        try {
+            return latestRate.entrySet().stream()
+                    .max(Comparator.comparing(Map.Entry::getKey))
+                    .get().getValue();
+        }catch (NoSuchElementException ex){
+            logger.error("latestRate is empty", ex);
+            throw  new RepositoryException("latestRate is empty", ex);
+        }
 
     }
 
@@ -55,11 +60,29 @@ public class BitcoinRepositoryDAOImpl implements BitcoinRepositoryDAO {
     @Override
     public List<BitcoinRepositoryDTO> getHistoricalRates(LocalDate initialDate, LocalDate endDate) {
 
+        try {
 
-        return historicalRates.entrySet().stream()
-                .filter(x -> x.getKey() >= initialDate.toEpochDay() && x.getKey() <= endDate.toEpochDay())
-                .map(Map.Entry::getValue)
-                .collect(Collectors.toList());
+            if(historicalRates.entrySet().stream()
+
+                    .filter(x -> x.getKey() >= initialDate.atStartOfDay().toEpochSecond(ZoneOffset.UTC) &&
+                            x.getKey() <= endDate.atStartOfDay().toEpochSecond(ZoneOffset.UTC) )
+
+                    .map(Map.Entry::getValue)
+                    .count() == 0){
+
+                logger.info("No values in memory database exists, returning empty result");
+                return new ArrayList<>();
+            }
+
+            return historicalRates.entrySet().stream()
+                    .filter(x -> x.getKey() >= initialDate.atStartOfDay().toEpochSecond(ZoneOffset.UTC)  &&
+                            x.getKey() <= endDate.atStartOfDay().toEpochSecond(ZoneOffset.UTC) )
+                    .map(Map.Entry::getValue)
+                    .collect(Collectors.toList());
+        }catch (NoSuchElementException ex){
+            logger.error("latestRate is empty", ex);
+            throw  new RepositoryException("latestRate is empty", ex);
+        }
 
 
     }

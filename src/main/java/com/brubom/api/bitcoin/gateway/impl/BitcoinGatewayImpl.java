@@ -88,7 +88,7 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
 
         try {
             response = restTemplate.getForEntity(bitcoinApiHistoricalRateEndpoint +
-                    "start=" + DateUtils.getStringFromLocalDate(startDate) +
+                    "?start=" + DateUtils.getStringFromLocalDate(startDate) +
                     "&end=" + DateUtils.getStringFromLocalDate(endDate), String.class);
         }catch (Exception ex){
             logger.error("Failed to call openweatherapi on " + bitcoinApiLatestRateEndpoint, ex);
@@ -145,8 +145,6 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readTree(jsonBody);
 
-        LocalDateTime lastUpdated =
-                DateUtils.getLocalDateTimeDefaultFromString(root.path("time").path("updatedISO").asText());
 
         List<BitcoinGatewayDTO> historicalRates = new ArrayList<>();
         for (Iterator<Map.Entry<String, JsonNode>> it = root.path("bpi").fields(); it.hasNext(); ) {
@@ -155,9 +153,9 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
 
             BitcoinGatewayDTO bitcoinGatewayDTO = new BitcoinGatewayDTO();
 
-            bitcoinGatewayDTO.setLastUpdatedDateTime(lastUpdated);
             bitcoinGatewayDTO.setRateDate(
                     DateUtils.getLocalDateFromString(node.getKey()));
+            bitcoinGatewayDTO.setLastUpdatedDateTime(bitcoinGatewayDTO.getRateDate().atStartOfDay());
 
             bitcoinGatewayDTO.setRate(
                     new BigDecimal(node.getValue().asDouble())

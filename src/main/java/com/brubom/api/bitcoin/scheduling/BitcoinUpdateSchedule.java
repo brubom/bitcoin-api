@@ -1,29 +1,30 @@
-package com.brubom.api.bitcoin.service.impl;
+package com.brubom.api.bitcoin.scheduling;
 
 import com.brubom.api.bitcoin.gateway.BitcoinGateway;
 import com.brubom.api.bitcoin.gateway.dto.BitcoinGatewayDTO;
 import com.brubom.api.bitcoin.repository.BitcoinRepositoryDAO;
 import com.brubom.api.bitcoin.repository.dto.BitcoinRepositoryDTO;
-import com.brubom.api.bitcoin.service.BitcoinUpdateLookupService;
-import com.brubom.api.bitcoin.util.DateUtils;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
+@Component
 @PropertySource(value={"classpath:application.properties"})
-public class BitcoinUpdateLookupServiceImpl implements BitcoinUpdateLookupService {
+public class BitcoinUpdateSchedule {
 
 
-    private static final Logger logger = LogManager.getLogger(BitcoinUpdateLookupServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(BitcoinUpdateSchedule.class);
 
     @Autowired
     private BitcoinRepositoryDAO bitcoinRepositoryDAO;
@@ -32,21 +33,25 @@ public class BitcoinUpdateLookupServiceImpl implements BitcoinUpdateLookupServic
     @Autowired
     private BitcoinGateway bitcoinGateway;
 
-    @Value("${spring.bitcoin-api.rate.bitcoin.check.period}")
-    private String bitcoinCheckPeriod;
 
     @Value("${spring.bitcoin-api.rate.bitcoin.number.days.update.historical.rates}")
-    private String numberOfDaysToUpdateHistoricalRates;
+    private int numberOfDaysToUpdateHistoricalRates;
 
+    @PostConstruct
+    private void init() {
+       try{
+           updateBitcoinDatabase();
+       }catch (Exception ex){
+           logger.error("Failed to stop scheduler", ex);
+       }
+    }
 
+    @Scheduled(cron = "${spring.bitcoin-api.rate.bitcoin.check.period}")
+    public void updateBitcoinDatabase() throws InterruptedException {
 
-    @Async
-    @Override
-    public void UpdateBitcoinDatabase() throws InterruptedException {
+        logger.info("***********---Updating bitcoin database---***********");
 
-        logger.info("Updating bitcoin database");
-
-        LocalDate startDate = LocalDate.now().minusDays(Integer.getInteger(numberOfDaysToUpdateHistoricalRates));
+        LocalDate startDate = LocalDate.now().minusDays((numberOfDaysToUpdateHistoricalRates == 0 ? 365 : numberOfDaysToUpdateHistoricalRates));
         LocalDate endDate = LocalDate.now();
 
         bitcoinRepositoryDAO.setHistoricalRates(
@@ -57,7 +62,7 @@ public class BitcoinUpdateLookupServiceImpl implements BitcoinUpdateLookupServic
         );
 
         logger.info("Waiting :" + numberOfDaysToUpdateHistoricalRates + " for next update");
-        Thread.sleep(Long.getLong(bitcoinCheckPeriod));
+
 
     }
 
