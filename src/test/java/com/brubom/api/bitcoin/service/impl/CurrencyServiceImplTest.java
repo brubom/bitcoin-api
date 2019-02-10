@@ -4,9 +4,9 @@ import com.brubom.api.bitcoin.model.ExchangeRate;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.brubom.api.bitcoin.repository.CurrencyRateDAO;
+import com.brubom.api.bitcoin.repository.BitcoinRepositoryDAO;
 import com.brubom.api.bitcoin.repository.dto.CurrencyRateDTO;
-import com.brubom.api.bitcoin.service.CurrencyService;
+import com.brubom.api.bitcoin.service.BitcoinService;
 import com.brubom.api.bitcoin.util.CurrentDateMock;
 import com.brubom.api.bitcoin.util.DateUtils;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,10 +26,10 @@ public class CurrencyServiceImplTest {
 
 
     @Autowired
-    private CurrencyService currencyService;
+    private BitcoinService currencyService;
 
     @Autowired
-    private CurrencyRateDAO currencyRateDAO;
+    private BitcoinRepositoryDAO currencyRateDAO;
 
     @Autowired
     private DateUtils dateUtils;

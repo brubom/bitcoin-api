@@ -1,12 +1,16 @@
 package com.brubom.api.bitcoin.util;
 
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 /**
- *
+ * Helper class used to provide common datetime functions
  */
 @Component
 public class DateUtils {
@@ -16,6 +20,7 @@ public class DateUtils {
     public String getStringFromLocalDate(LocalDate localDate){
 
         return localDate.format(formatter);
+
     }
 
 
@@ -24,6 +29,20 @@ public class DateUtils {
 
     }
 
+    public LocalDateTime getLocalDateTimeDefaultFromString(String dateTimeString){
+
+        return getLocalDateTimeZoneString(dateTimeString, "UTC");
+    }
+
+    public LocalDateTime getLocalDateTimeZoneString(String dateTimeString, String zone){
+
+
+        return LocalDateTime.ofInstant(Instant.ofEpochSecond( Integer.parseInt(dateTimeString)),
+                ZoneId.of(zone));
+
+
+
+    }
 
 
 }

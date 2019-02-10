@@ -1,6 +1,6 @@
 package com.brubom.api.bitcoin.repository.impl;
 
-import com.brubom.api.bitcoin.repository.CurrencyRateDAO;
+import com.brubom.api.bitcoin.repository.BitcoinRepositoryDAO;
 import com.brubom.api.bitcoin.repository.dto.CurrencyRateDTO;
 import com.brubom.api.bitcoin.util.CurrentDateMock;
 import com.brubom.api.bitcoin.util.EmbededRedis;
@@ -24,7 +24,7 @@ public class CurrencyRateDAOImplTest {
     private EmbededRedis embededRedisTestConfiguration;
 
     @Autowired
-    private CurrencyRateDAO currencyRateDAO;
+    private BitcoinRepositoryDAO currencyRateDAO;
 
 
     @Before
