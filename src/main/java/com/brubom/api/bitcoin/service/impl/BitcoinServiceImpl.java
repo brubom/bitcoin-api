@@ -57,17 +57,18 @@ public class BitcoinServiceImpl implements BitcoinService {
     public List<BitcoinServiceDTO> getHistoricalRates(String startDate, String endDate) {
 
         try {
-        LocalDate start = DateUtils.getLocalDateFromString(startDate);
-        LocalDate end = DateUtils.getLocalDateFromString(endDate);
+            LocalDate start = DateUtils.getLocalDateFromString(startDate);
+            LocalDate end = DateUtils.getLocalDateFromString(endDate);
 
-        List<BitcoinRepositoryDTO> historyFromRepo =
-                bitcoinRepositoryDAO.getHistoricalRates(start, end);
+            List<BitcoinRepositoryDTO> historyFromRepo =
+                    bitcoinRepositoryDAO.getHistoricalRates(start, end);
 
-        if(historyFromRepo.size() > 0)
-            return fromRepoToServiceDTO(historyFromRepo);
+            if(historyFromRepo.size() > 0)
+                return fromRepoToServiceDTO(historyFromRepo);
 
 
-        return fromGatewayToServiceDTO(bitcoinGateway.getHistoricalRates(start, end));
+            return fromGatewayToServiceDTO(bitcoinGateway.getHistoricalRates(start, end));
+
         }catch (Exception ex){
             logger.error("Failed to get historical rates on service", ex);
             throw  new ServiceException("Failed to get historical rates on service", ex);

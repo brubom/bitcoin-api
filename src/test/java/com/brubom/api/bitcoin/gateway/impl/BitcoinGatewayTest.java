@@ -29,13 +29,6 @@ import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@TestPropertySource(properties = {
-        "spring.bitcoin-api.rate.bitcoin.check.period=100",
-        "spring.bitcoin-api.rate.bitcoin.number.days.update.historical.rates=365",
-        "spring.coindesk.rate.latest.endpoint=https://api.coindesk.com/v1/bpi/currentprice/usd.json",
-        "spring.coindesk.rate.historical.endpoint=https://api.coindesk.com/v1/bpi/historical/close.json"
-
-})
 public class BitcoinGatewayTest {
 
     @InjectMocks
