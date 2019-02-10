@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
@@ -26,6 +27,7 @@ import java.util.Map;
 /**
  * Implementation of BitcoinGateway
  */
+@Component
 public class BitcoinGatewayImpl implements BitcoinGateway {
 
     private static final Logger logger = LogManager.getLogger(BitcoinGatewayImpl.class);
@@ -81,7 +83,7 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
      * @return a list of CoindeskDTO
      */
     @Override
-    public List<BitcoinGatewayDTO> getHistoricalRates(LocalDate startDate, LocalDate endDate) throws IOException {
+    public List<BitcoinGatewayDTO> getHistoricalRates(LocalDate startDate, LocalDate endDate) throws GatewayException {
 
         logger.debug("Calling getHistoricalRates service on endpoint:" + bitcoinApiLatestRateEndpoint);
         ResponseEntity<String> response  = null;
@@ -90,10 +92,17 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
             response = restTemplate.getForEntity(bitcoinApiLatestRateEndpoint , String.class);
         }catch (Exception ex){
             logger.error("Failed to call openweatherapi on " + bitcoinApiLatestRateEndpoint, ex);
-            throw  ex;
+            throw  new GatewayException("Failed to call openweatherapi on " + bitcoinApiLatestRateEndpoint, ex);
         }
 
-        return getHistoricalRatesfromJson(response.getBody());
+        try {
+            return getHistoricalRatesfromJson(response.getBody());
+        }catch (Exception ex){
+            logger.error("Failed to call json to DTO at: " + bitcoinApiLatestRateEndpoint, ex);
+            throw  new GatewayException("Failed to call json to DTO at:: " +
+                    bitcoinApiLatestRateEndpoint, ex);
+        }
+
     }
 
     /**

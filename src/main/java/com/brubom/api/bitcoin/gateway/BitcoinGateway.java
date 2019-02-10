@@ -18,7 +18,7 @@ public interface BitcoinGateway {
      * Get latest rate from coindesk api
      * @return a single CoindeskDTO
      */
-    BitcoinGatewayDTO getLatestRate() throws IOException, GatewayException;
+    BitcoinGatewayDTO getLatestRate() throws GatewayException;
 
     /**
      * Return rates from start to end date
@@ -26,6 +26,6 @@ public interface BitcoinGateway {
      * @param endDate end of historical values
      * @return a list of CoindeskDTO
      */
-    List<BitcoinGatewayDTO> getHistoricalRates(LocalDate startDate, LocalDate endDate) throws IOException;
+    List<BitcoinGatewayDTO> getHistoricalRates(LocalDate startDate, LocalDate endDate) throws GatewayException;
 
 }

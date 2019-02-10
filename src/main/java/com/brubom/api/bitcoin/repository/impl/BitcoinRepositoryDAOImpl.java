@@ -7,9 +7,7 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -63,6 +61,44 @@ public class BitcoinRepositoryDAOImpl implements BitcoinRepositoryDAO {
                 .map(Map.Entry::getValue)
                 .collect(Collectors.toList());
 
+
+    }
+
+    /**
+     * Update latest rate in database for today
+     *
+     * @param latesBitcointRate latest rate
+     */
+    @Override
+    public void setLatestRate(BitcoinRepositoryDTO latesBitcointRate) {
+
+        latestRate.put(latesBitcointRate.getLastUpdatedDateTime().toEpochSecond(ZoneOffset.UTC), latesBitcointRate);
+
+
+    }
+
+    /**
+     * Update historical rates in database
+     *
+     * @param historicalBitcoinRates historical rates
+     */
+    @Override
+    public void setHistoricalRates(List<BitcoinRepositoryDTO> historicalBitcoinRates) {
+
+        Map<Long, BitcoinRepositoryDTO> tempHistoricalRates =  new ConcurrentHashMap<>(365);
+
+
+        historicalBitcoinRates.forEach(item ->{
+            BitcoinRepositoryDTO bitcoinRepositoryDTO = new BitcoinRepositoryDTO();
+            bitcoinRepositoryDTO.setRate(item.getRate());
+            bitcoinRepositoryDTO.setRateDate(item.getRateDate());
+            bitcoinRepositoryDTO.setLastUpdatedDateTime(item.getLastUpdatedDateTime());
+            tempHistoricalRates.put( item.getLastUpdatedDateTime().toEpochSecond(ZoneOffset.UTC),
+                    bitcoinRepositoryDTO );
+        });
+
+        historicalRates.clear();
+        historicalRates.putAll(tempHistoricalRates);
 
     }
 }

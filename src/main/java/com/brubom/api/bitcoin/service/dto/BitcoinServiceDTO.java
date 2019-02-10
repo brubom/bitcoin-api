@@ -1,9 +1,5 @@
 package com.brubom.api.bitcoin.service.dto;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 /**
  * A DTO represening data from our won bitcoin service
  */

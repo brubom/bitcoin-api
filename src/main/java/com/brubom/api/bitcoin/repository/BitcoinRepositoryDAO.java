@@ -26,14 +26,14 @@ public interface BitcoinRepositoryDAO {
     List<BitcoinRepositoryDTO> getHistoricalRates(LocalDate initialDate, LocalDate endDate);
 
     /**
-     *
-     * @param latestRate
+     * Update latest rate in database for today
+     * @param latesBitcointRate latest rate
      */
-    void setLatestRate(BitcoinRepositoryDTO latestRate);
+    void setLatestRate(BitcoinRepositoryDTO latesBitcointRate);
 
     /**
-     * 
-     * @param historicalRates
+     * Update historical rates in database
+     * @param historicalBitcoinRates historical rates
      */
-    void setHistoricalRates(List<BitcoinRepositoryDTO> historicalRates);
+    void setHistoricalRates(List<BitcoinRepositoryDTO> historicalBitcoinRates);
 }
