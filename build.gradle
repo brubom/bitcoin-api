@@ -3,6 +3,7 @@ apply plugin: 'idea'
 apply plugin: 'jacoco'
 apply plugin: 'org.springframework.boot'
 
+
 group 'com.brubom.api.bitcoin'
 version '1.0-SNAPSHOT'
 
@@ -35,6 +36,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-autoconfigure'
     // https://mvnrepository.com/artifact/redis.clients/jedis
     compile group: 'redis.clients', name: 'jedis', version: '3.0.1'
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
     testCompile group: 'com.github.kstyrc', name: 'embedded-redis', version: '0.6'
     testCompile 'junit:junit:4.12'
     testCompile 'org.meanbean:meanbean:2.0.3'

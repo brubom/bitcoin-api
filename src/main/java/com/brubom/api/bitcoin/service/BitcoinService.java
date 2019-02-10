@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * This is a service for bitcoin/dollar rates
+ * @see com.brubom.api.bitcoin.service.impl.BitcoinServiceImpl
  */
 public interface BitcoinService {
 

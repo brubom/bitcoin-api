@@ -42,8 +42,6 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Autowired
-    private DateUtils dateUtils;
 
     /**
      * Get latest rate from coindesk api
@@ -57,7 +55,7 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
         ResponseEntity<String> response  = null;
 
         try {
-            response = restTemplate.getForEntity(bitcoinApiLatestRateEndpoint , String.class);
+            response = restTemplate.getForEntity(bitcoinApiLatestRateEndpoint + "" , String.class);
         }catch (Exception ex){
             logger.error("Failed to call openweatherapi getLatestRate on " + bitcoinApiLatestRateEndpoint, ex);
             throw  new GatewayException("Error while consuming getLatestRate endpoin at: " +
@@ -89,7 +87,9 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
         ResponseEntity<String> response  = null;
 
         try {
-            response = restTemplate.getForEntity(bitcoinApiLatestRateEndpoint , String.class);
+            response = restTemplate.getForEntity(bitcoinApiHistoricalRateEndpoint +
+                    "start=" + DateUtils.getStringFromLocalDate(startDate) +
+                    "&end=" + DateUtils.getStringFromLocalDate(endDate), String.class);
         }catch (Exception ex){
             logger.error("Failed to call openweatherapi on " + bitcoinApiLatestRateEndpoint, ex);
             throw  new GatewayException("Failed to call openweatherapi on " + bitcoinApiLatestRateEndpoint, ex);
@@ -113,12 +113,11 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
      */
     private BitcoinGatewayDTO getLatestRatefromJson(String jsonBody) throws IOException {
 
-
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readTree(jsonBody);
 
         LocalDateTime lastUpdated =
-                dateUtils.getLocalDateTimeDefaultFromString(root.path("time").path("updated").asText());
+                DateUtils.getLocalDateTimeDefaultFromString(root.path("time").path("updatedISO").asText());
 
         LocalDate rateDate = lastUpdated.toLocalDate();
 
@@ -147,7 +146,7 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
         JsonNode root = mapper.readTree(jsonBody);
 
         LocalDateTime lastUpdated =
-                dateUtils.getLocalDateTimeDefaultFromString(root.path("time").path("updated").asText());
+                DateUtils.getLocalDateTimeDefaultFromString(root.path("time").path("updatedISO").asText());
 
         List<BitcoinGatewayDTO> historicalRates = new ArrayList<>();
         for (Iterator<Map.Entry<String, JsonNode>> it = root.path("bpi").fields(); it.hasNext(); ) {
@@ -158,7 +157,7 @@ public class BitcoinGatewayImpl implements BitcoinGateway {
 
             bitcoinGatewayDTO.setLastUpdatedDateTime(lastUpdated);
             bitcoinGatewayDTO.setRateDate(
-                    dateUtils.getLocalDateFromString(node.getKey()));
+                    DateUtils.getLocalDateFromString(node.getKey()));
 
             bitcoinGatewayDTO.setRate(
                     new BigDecimal(node.getValue().asDouble())

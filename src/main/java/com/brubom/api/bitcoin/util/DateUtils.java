@@ -3,38 +3,35 @@ package com.brubom.api.bitcoin.util;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 /**
  * Helper class used to provide common datetime functions
  */
-@Component
+
 public class DateUtils {
 
-    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-    public String getStringFromLocalDate(LocalDate localDate){
+    public static String getStringFromLocalDate(LocalDate localDate){
 
         return localDate.format(formatter);
 
     }
 
 
-    public LocalDate getLocalDateFromString(String dateString){
+    public static LocalDate getLocalDateFromString(String dateString){
         return LocalDate.parse(dateString, formatter);
 
     }
 
-    public LocalDateTime getLocalDateTimeDefaultFromString(String dateTimeString){
+    public static LocalDateTime getLocalDateTimeDefaultFromString(String dateTimeString){
 
-        return getLocalDateTimeZoneString(dateTimeString, "UTC");
+        return ZonedDateTime.parse(dateTimeString).toLocalDateTime();
     }
 
-    public LocalDateTime getLocalDateTimeZoneString(String dateTimeString, String zone){
+    public static LocalDateTime getLocalDateTimeZoneString(String dateTimeString, String zone){
 
 
         return LocalDateTime.ofInstant(Instant.ofEpochSecond( Integer.parseInt(dateTimeString)),
@@ -44,7 +41,7 @@ public class DateUtils {
 
     }
 
-    public String getStringFromLocalDateTimeDefault(LocalDateTime dateTime){
+    public static String getStringFromLocalDateTimeDefault(LocalDateTime dateTime){
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return dateTime.format(formatter);

@@ -1,0 +1,16 @@
+{
+  "time":{
+    "updated":"Feb 10, 2019 10:37:00 UTC",
+    "updatedISO":"2019-02-10T10:37:00+00:00",
+    "updateduk":"Feb 10, 2019 at 10:37 GMT"
+  },
+  "disclaimer":"This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org",
+  "bpi":{
+    "USD":{
+      "code":"USD",
+      "rate":"3,632.7650",
+      "description":"United States Dollar",
+      "rate_float":3632.765
+    }
+  }
+}

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="com.brubom.api.bitcoint.currency-api.main" target="1.8" />
+      <module name="com.brubom.api.bitcoint.currency-api.test" target="1.8" />
       <module name="com.brubom.api.currency.currency-api.main" target="1.8" />
       <module name="com.brubom.api.currency.currency-api.test" target="1.8" />
     </bytecodeTargetLevel>

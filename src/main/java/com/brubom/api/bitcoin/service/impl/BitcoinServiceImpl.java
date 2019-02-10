@@ -1,10 +1,8 @@
 package com.brubom.api.bitcoin.service.impl;
 
-import com.brubom.api.bitcoin.exception.GatewayException;
 import com.brubom.api.bitcoin.exception.ServiceException;
 import com.brubom.api.bitcoin.gateway.BitcoinGateway;
 import com.brubom.api.bitcoin.gateway.dto.BitcoinGatewayDTO;
-import com.brubom.api.bitcoin.gateway.impl.BitcoinGatewayImpl;
 import com.brubom.api.bitcoin.repository.BitcoinRepositoryDAO;
 import com.brubom.api.bitcoin.repository.dto.BitcoinRepositoryDTO;
 import com.brubom.api.bitcoin.service.BitcoinService;
@@ -13,13 +11,13 @@ import com.brubom.api.bitcoin.util.DateUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
+@Service
 public class BitcoinServiceImpl implements BitcoinService {
 
     private static final Logger logger = LogManager.getLogger(BitcoinServiceImpl.class);
@@ -30,8 +28,7 @@ public class BitcoinServiceImpl implements BitcoinService {
     @Autowired
     private BitcoinGateway bitcoinGateway;
 
-    @Autowired
-    private DateUtils dateUtils;
+
 
     /**
      * get a single, latest rate convertion from bitcoin to dollar
@@ -60,8 +57,8 @@ public class BitcoinServiceImpl implements BitcoinService {
     public List<BitcoinServiceDTO> getHistoricalRates(String startDate, String endDate) {
 
         try {
-        LocalDate start = dateUtils.getLocalDateFromString(startDate);
-        LocalDate end = dateUtils.getLocalDateFromString(endDate);
+        LocalDate start = DateUtils.getLocalDateFromString(startDate);
+        LocalDate end = DateUtils.getLocalDateFromString(endDate);
 
         List<BitcoinRepositoryDTO> historyFromRepo =
                 bitcoinRepositoryDAO.getHistoricalRates(start, end);
@@ -86,10 +83,10 @@ public class BitcoinServiceImpl implements BitcoinService {
                     bitcoinServiceDTO.setRate(bitcoinGatewayDTO.getRate().toString());
 
                     bitcoinServiceDTO.setLastUpdatedDateTime(
-                            dateUtils.getStringFromLocalDateTimeDefault(bitcoinGatewayDTO.getLastUpdatedDateTime()));
+                            DateUtils.getStringFromLocalDateTimeDefault(bitcoinGatewayDTO.getLastUpdatedDateTime()));
 
                     bitcoinServiceDTO.setRateDate(
-                            dateUtils.getStringFromLocalDate(bitcoinGatewayDTO.getRateDate()));
+                            DateUtils.getStringFromLocalDate(bitcoinGatewayDTO.getRateDate()));
 
                     return bitcoinServiceDTO;
                 })
@@ -103,10 +100,10 @@ public class BitcoinServiceImpl implements BitcoinService {
                     bitcoinServiceDTO.setRate(bitcoinGatewayDTO.getRate().toString());
 
                     bitcoinServiceDTO.setLastUpdatedDateTime(
-                            dateUtils.getStringFromLocalDateTimeDefault(bitcoinGatewayDTO.getLastUpdatedDateTime()));
+                            DateUtils.getStringFromLocalDateTimeDefault(bitcoinGatewayDTO.getLastUpdatedDateTime()));
 
                     bitcoinServiceDTO.setRateDate(
-                            dateUtils.getStringFromLocalDate(bitcoinGatewayDTO.getRateDate()));
+                            DateUtils.getStringFromLocalDate(bitcoinGatewayDTO.getRateDate()));
 
                     return bitcoinServiceDTO;
                 })
@@ -119,10 +116,10 @@ public class BitcoinServiceImpl implements BitcoinService {
         bitcoinServiceDTO.setRate(historyFromRepo.getRate().toString());
 
         bitcoinServiceDTO.setLastUpdatedDateTime(
-                dateUtils.getStringFromLocalDateTimeDefault(historyFromRepo.getLastUpdatedDateTime()));
+                DateUtils.getStringFromLocalDateTimeDefault(historyFromRepo.getLastUpdatedDateTime()));
 
         bitcoinServiceDTO.setRateDate(
-                dateUtils.getStringFromLocalDate(historyFromRepo.getRateDate()));
+                DateUtils.getStringFromLocalDate(historyFromRepo.getRateDate()));
 
         return bitcoinServiceDTO;
     }

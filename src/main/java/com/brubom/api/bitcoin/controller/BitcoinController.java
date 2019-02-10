@@ -7,12 +7,14 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.constraints.Pattern;
-import java.io.IOException;
 import java.util.List;
+
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 /**
  *
@@ -22,19 +24,24 @@ public class BitcoinController {
 
     private static final Logger logger = LogManager.getLogger(BitcoinController.class);
 
+    private final String dateRegex = "([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))";
+
     @Autowired
     private BitcoinService bitcoinService;
 
-    @GetMapping("/historicalrates")
-    public List<BitcoinServiceDTO> getWeatherAverage(@RequestParam(value="city")
-                                                   @Pattern(regexp = "^[a-zA-Z ]*$")
-                                                           String startDate,
-                                                     @RequestParam(value="city")
-                                               @Pattern(regexp = "^[a-zA-Z ]*$")
-                                                       String endDate)  {
+    @RequestMapping(
+            value = "/historicalrates",
+            params = { "start", "end" },
+            method = GET)
+    public List<BitcoinServiceDTO> getWeatherAverage(@RequestParam(value="start")
+                                                   @Pattern(regexp = dateRegex)
+                                                           String start,
+                                                     @RequestParam(value="end")
+                                               @Pattern(regexp = dateRegex)
+                                                       String end)  {
 
         logger.debug("Getting historical rates on controller");
-        return bitcoinService.getHistoricalRates(startDate, endDate);
+        return bitcoinService.getHistoricalRates(start, end);
 
     }
 
