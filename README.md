@@ -1,6 +1,6 @@
 # bitcoin API
 
-[![Build Status](https://travis-ci.org/brubom/weather-api.svg?branch=master)](https://travis-ci.org/brubom/weather-api)
+[![Build Status](https://travis-ci.org/brubom/bitcoin-api.svg?branch=master)](https://travis-ci.org/brubom/bitcoin-api)
 
 This is how I solved the challenge. 
 
